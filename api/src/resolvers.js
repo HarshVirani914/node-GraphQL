@@ -9,6 +9,7 @@ module.exports = {
       return context.models.Pet.findMany(input);
     },
     pet(_, { input }, context) {
+      console.log("Query => pet");
       return context.models.Pet.findOne(input);
     },
   },
@@ -17,12 +18,21 @@ module.exports = {
       return context.models.Pet.create(input);
     },
   },
-  // Pet: {
-  //   img(pet) {
-  //     return pet.type === "DOG"
-  //       ? "https://placedog.net/300/300"
-  //       : "http://placekitten.com/300/300";
-  //   },
-  // },
-  // User: {},
+  Pet: {
+    owner(_, __, context) {
+      console.log("PET => OWNER");
+      return context.models.User.findOne();
+    },
+    // img(pet) {
+    //   return pet.type === "DOG"
+    //     ? "https://placedog.net/300/300"
+    //     : "http://placekitten.com/300/300";
+    // },
+  },
+  User: {
+    pets(_, __, context) {
+      console.log("USER => PETS");
+      return context.models.Pet.findMany();
+    },
+  },
 };
