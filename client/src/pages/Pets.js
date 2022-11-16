@@ -11,10 +11,6 @@ const GET_PETS = gql`
       id
       name
       type
-      owner {
-        id
-        username
-      }
     }
   }
 `;
@@ -23,11 +19,12 @@ export default function Pets() {
   const [modal, setModal] = useState(false);
   const { data, loading, error } = useQuery(GET_PETS);
 
-  console.log(data);
-
   const onSubmit = (input) => {
     setModal(false);
   };
+
+  if (loading) return <Loader />;
+  if (error) return <p>ERROR!!</p>;
 
   if (modal) {
     return <NewPetModal onSubmit={onSubmit} onCancel={() => setModal(false)} />;
@@ -47,7 +44,7 @@ export default function Pets() {
         </div>
       </section>
       <section>
-        <PetsList />
+        <PetsList pets={data.pets} />
       </section>
     </div>
   );

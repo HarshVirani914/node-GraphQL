@@ -1,11 +1,9 @@
 const { gql } = require("apollo-server");
 
+/**
+ * Type Definitions for our Schema using the SDL.
+ */
 const typeDefs = gql`
-  enum PetType {
-    CAT
-    DOG
-  }
-
   type User {
     id: ID!
     username: String!
@@ -14,30 +12,30 @@ const typeDefs = gql`
 
   type Pet {
     id: ID!
-    type: PetType!
+    createdAt: String!
     name: String!
+    type: String!
     owner: User!
     img: String!
-    createdAt: Int!
+  }
+
+  input PetInput {
+    name: String
+    type: String
+  }
+
+  type Query {
+    pets(input: PetInput): [Pet]!
+    pet(input: PetInput): Pet
   }
 
   input NewPetInput {
     name: String!
-    type: PetType!
-  }
-
-  input PetsInput {
-    type: PetType
-  }
-
-  type Query {
-    user: User!
-    pets(input: PetsInput): [Pet]!
-    pet(id: ID!): Pet!
+    type: String!
   }
 
   type Mutation {
-    addPet(input: NewPetInput!): Pet!
+    newPet(input: NewPetInput!): Pet
   }
 `;
 

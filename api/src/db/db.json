@@ -8,21 +8,35 @@
       "id": "1",
       "createdAt": 875685,
       "name": "moose",
-      "type": "dog",
+      "type": "DOG",
       "user": "765698696"
     },
     {
       "id": "2",
       "createdAt": 858765,
       "name": "daryl",
-      "type": "cat",
+      "type": "CAT",
       "user": "765698696"
     },
     {
       "id": "GrleeaFBKQQWkH5wyszQJ",
       "createdAt": 1668423327243,
       "name": "sheru",
-      "type": "dog",
+      "type": "DOG",
+      "user": "765698696"
+    },
+    {
+      "id": "GrleeaFjknBKQQWkH5wyszQJ",
+      "createdAt": 1668423327243,
+      "name": "mili",
+      "type": "CAT",
+      "user": "765698696"
+    },
+    {
+      "id": "GrleeaFlksBKQQWkH5wyszQJ",
+      "createdAt": 1668423327243,
+      "name": "HERO",
+      "type": "DOG",
       "user": "765698696"
     }
   ]
