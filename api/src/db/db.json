@@ -45,6 +45,13 @@
       "name": "batman",
       "type": "DOG",
       "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "QiySZ0xtdWNufmxdD9rJn",
+      "createdAt": 1668589799731,
+      "name": "kitty",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
     }
   ]
 }
