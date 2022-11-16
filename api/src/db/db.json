@@ -52,6 +52,27 @@
       "name": "kitty",
       "type": "CAT",
       "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "aGEbVJV-e3SXVdotBgxfV",
+      "createdAt": 1668590788062,
+      "name": "Garfield",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "Iuf5Nn9k-Uw1WXtf7kWud",
+      "createdAt": 1668592487378,
+      "name": "goose",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "Uew9GpQ0hZUDp3AQnnegb",
+      "createdAt": 1668594509469,
+      "name": "Carol",
+      "type": "CAT",
+      "user": "jBWMVGjm50l6LGwepDoty"
     }
   ]
 }
